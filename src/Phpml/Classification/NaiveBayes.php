@@ -68,7 +68,7 @@ class NaiveBayes implements Classifier
 
         $labelCounts = array_count_values($this->targets);
         $this->labels = array_keys($labelCounts);
-        $this->labels = array_map('strval', $this->labels);
+        $this->labels = array_unique(array_map('strval', $this->labels));
         foreach ($this->labels as $label) {
             $samples = $this->getSamplesByLabel($label);
             $this->p[$label] = count($samples) / $this->sampleCount;
