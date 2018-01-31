@@ -2,9 +2,17 @@
     "name": "php-ai/php-ml",
     "type": "library",
     "description": "PHP-ML - Machine Learning library for PHP",
-    "license": "MIT",
-    "keywords": ["machine learning","pattern recognition","neural network","computational learning theory","artificial intelligence","data science","feature extraction"],
+    "keywords": [
+        "machine learning",
+        "pattern recognition",
+        "neural network",
+        "computational learning theory",
+        "artificial intelligence",
+        "data science",
+        "feature extraction"
+    ],
     "homepage": "https://github.com/php-ai/php-ml",
+    "license": "MIT",
     "authors": [
         {
             "name": "Arkadiusz Kondas",
@@ -15,10 +23,14 @@
         "php": "^7.1"
     },
     "require-dev": {
+        "phpstan/phpstan-shim": "^0.9",
         "phpunit/phpunit": "^6.5",
-        "symplify/easy-coding-standard": "^3.1",
         "symplify/coding-standard": "^3.1",
-        "phpstan/phpstan-shim": "^0.9"
+        "symplify/easy-coding-standard": "^3.1"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
