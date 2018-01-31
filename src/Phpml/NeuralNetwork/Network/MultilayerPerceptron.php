@@ -145,8 +145,11 @@ abstract class MultilayerPerceptron extends LayeredNetwork implements Estimator,
     private function addNeuronLayers(array $layers, ?ActivationFunction $defaultActivationFunction = null): void
     {
         foreach ($layers as $layer) {
-            if (is_array($layer) && end($layer) instanceof ActivationFunction) {
-                $this->addLayer(new Layer($layer[0], Neuron::class, $layer[1]));
+            if (is_array($layer)) {
+                $function = $layer[1] instanceof ActivationFunction ? $layer[1] : $defaultActivationFunction;
+                $this->addLayer(new Layer($layer[0], Neuron::class, $function));
+            } elseif ($layer instanceof Layer) {
+                $this->addLayer($layer);
             } else {
                 $this->addLayer(new Layer($layer, Neuron::class, $defaultActivationFunction));
             }
