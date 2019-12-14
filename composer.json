@@ -20,13 +20,15 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.2"
     },
     "require-dev": {
-        "phpstan/phpstan-shim": "^0.9",
-        "phpunit/phpunit": "^6.5",
-        "symplify/coding-standard": "^3.1",
-        "symplify/easy-coding-standard": "^3.1"
+        "phpbench/phpbench": "^0.16.0",
+        "phpstan/phpstan-phpunit": "^0.11",
+        "phpstan/phpstan-shim": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpunit/phpunit": "^8.0",
+        "symplify/easy-coding-standard": "^6.0"
     },
     "config": {
         "preferred-install": "dist",
@@ -34,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Phpml\\": "src/Phpml"
+            "Phpml\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Phpml\\Tests\\": "tests/Phpml"
+            "Phpml\\Tests\\": "tests/"
         }
     },
     "scripts": {

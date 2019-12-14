@@ -1,23 +1,21 @@
 # PHP-ML - Machine Learning library for PHP
 
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1-8892BF.svg)](https://php.net/)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.2-8892BF.svg)](https://php.net/)
 [![Latest Stable Version](https://img.shields.io/packagist/v/php-ai/php-ml.svg)](https://packagist.org/packages/php-ai/php-ml)
-[![Build Status](https://scrutinizer-ci.com/g/php-ai/php-ml/badges/build.png?b=master)](https://scrutinizer-ci.com/g/php-ai/php-ml/build-status/master)
+[![Build Status](https://travis-ci.org/php-ai/php-ml.svg?branch=master)](https://travis-ci.org/php-ai/php-ml)
 [![Documentation Status](https://readthedocs.org/projects/php-ml/badge/?version=master)](http://php-ml.readthedocs.org/)
 [![Total Downloads](https://poser.pugx.org/php-ai/php-ml/downloads.svg)](https://packagist.org/packages/php-ai/php-ml)
 [![License](https://poser.pugx.org/php-ai/php-ml/license.svg)](https://packagist.org/packages/php-ai/php-ml)
-[![Coverage Status](https://coveralls.io/repos/github/php-ai/php-ml/badge.svg?branch=coveralls)](https://coveralls.io/github/php-ai/php-ml?branch=coveralls)
+[![Coverage Status](https://coveralls.io/repos/github/php-ai/php-ml/badge.svg?branch=master)](https://coveralls.io/github/php-ai/php-ml?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-ai/php-ml/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/php-ai/php-ml/?branch=master)
 
-<a href="http://www.yegor256.com/2016/10/23/award-2017.html">
-  <img src="http://www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png"
-  style="width:203px;height:45px;"/></a>
-  
-![PHP-ML - Machine Learning library for PHP](assets/php-ml-logo.png)
+<p align="center">
+	<img src="https://github.com/php-ai/php-ml/raw/master/docs/assets/php-ml-logo.png" />
+</p>
 
 Fresh approach to Machine Learning in PHP. Algorithms, Cross Validation, Neural Network, Preprocessing, Feature Extraction and much more in one library.
 
-PHP-ML requires PHP >= 7.1.
+PHP-ML requires PHP >= 7.2.
 
 Simple example of classification:
 ```php
@@ -31,9 +29,14 @@ $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
 $classifier = new KNearestNeighbors();
 $classifier->train($samples, $labels);
 
-$classifier->predict([3, 2]); 
+$classifier->predict([3, 2]);
 // return 'b'
 ```
+
+## Awards
+
+<a href="http://www.yegor256.com/2016/10/23/award-2017.html">
+  <img src="http://www.yegor256.com/images/award/2017/winner-itcraftsmanpl.png" width="400"/></a>
 
 ## Documentation
 
@@ -41,7 +44,7 @@ To find out how to use PHP-ML follow [Documentation](http://php-ml.readthedocs.o
 
 ## Installation
 
-Currently this library is in the process of developing, but You can install it with Composer:
+This library is still in beta. However, it can be installed with Composer:
 
 ```
 composer require php-ai/php-ml
@@ -53,7 +56,7 @@ Example scripts are available in a separate repository [php-ai/php-ml-examples](
 
 ## Features
 
-* Association rule Lerning
+* Association rule Learning
     * [Apriori](machine-learning/association/apriori.md)
 * Classification
     * [SVC](machine-learning/classification/svc.md)
@@ -76,9 +79,13 @@ Example scripts are available in a separate repository [php-ai/php-ml-examples](
 * Cross Validation
     * [Random Split](machine-learning/cross-validation/random-split.md)
     * [Stratified Random Split](machine-learning/cross-validation/stratified-random-split.md)
+* Feature Selection
+    * [Variance Threshold](machine-learning/feature-selection/variance-threshold.md)
+    * [SelectKBest](machine-learning/feature-selection/selectkbest.md)
 * Preprocessing
     * [Normalization](machine-learning/preprocessing/normalization.md)
     * [Imputation missing values](machine-learning/preprocessing/imputation-missing-values.md)
+    * LabelEncoder
 * Feature Extraction
     * [Token Count Vectorizer](machine-learning/feature-extraction/token-count-vectorizer.md)
     * [Tf-idf Transformer](machine-learning/feature-extraction/tf-idf-transformer.md)
@@ -86,6 +93,8 @@ Example scripts are available in a separate repository [php-ai/php-ml-examples](
     * [Array](machine-learning/datasets/array-dataset.md)
     * [CSV](machine-learning/datasets/csv-dataset.md)
     * [Files](machine-learning/datasets/files-dataset.md)
+    * [SVM](machine-learning/datasets/svm-dataset.md)
+    * [MNIST](machine-learning/datasets/mnist-dataset.md)
     * Ready to use:
         * [Iris](machine-learning/datasets/demo/iris.md)
         * [Wine](machine-learning/datasets/demo/wine.md)
@@ -97,10 +106,11 @@ Example scripts are available in a separate repository [php-ai/php-ml-examples](
     * [Matrix](math/matrix.md)
     * [Set](math/set.md)
     * [Statistic](math/statistic.md)
-    
+
 
 ## Contribute
 
+- Guide: [CONTRIBUTING.md](https://github.com/php-ai/php-ml/blob/master/CONTRIBUTING.md)
 - Issue Tracker: [github.com/php-ai/php-ml/issues](https://github.com/php-ai/php-ml/issues)
 - Source Code: [github.com/php-ai/php-ml](https://github.com/php-ai/php-ml)
 
